@@ -4,10 +4,16 @@
  #titulo{
     color: #ffb496;
 } */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .grilla {
   display: grid;
   grid-template-areas: "nav albumes foto_banda";
   grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: 1fr;
 }
 
 #titulo {
@@ -21,6 +27,7 @@
   width: max-content;
   grid-area: nav;
   width: 100%;
+  height: 478px;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -40,8 +47,8 @@
 
 #albumes {
   width: 100%;
-  height: 478px;
   grid-area: albumes;
+  margin-bottom: 2%;
 }
 #albumes ul li {
   display: flex;
@@ -53,6 +60,7 @@
   grid-area: foto_banda;
   display: flex;
   align-items: center;
+  height: 478px;
 }
 
 #fotobanda {
@@ -60,8 +68,22 @@
   margin-left: 5%;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 a {
   text-decoration: none;
+}
+
+h1 {
+  margin: 0;
 }
 
 h6 {
@@ -78,4 +100,13 @@ h5 {
   width: -moz-max-content;
   width: max-content;
   margin: 0;
+}
+
+footer {
+  background-color: red;
+  margin-top: auto;
+}
+footer div {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

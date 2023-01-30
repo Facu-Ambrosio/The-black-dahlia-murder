@@ -1,11 +1,15 @@
 @import "./imagenes/imagenes";
 @import "./colores/color";
-
+*{
+    margin: 0;
+    padding: 0;
+}
 .grilla{
     display: grid;
     grid-template-areas: 
     "nav albumes foto_banda";
     grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 1fr;
 }
 #titulo{
     display: flex;
@@ -15,6 +19,7 @@
     width: max-content;
     grid-area: nav;
     width: 100%;
+    height: 478px;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -31,8 +36,8 @@
 }
 #albumes{
     width: 100%;
-    height: 478px;
     grid-area: albumes;
+    margin-bottom: 2%;
     ul{
         li{
             display: flex;
@@ -45,14 +50,25 @@
     grid-area: foto_banda;
     display: flex;
     align-items: center;
-
+    height: 478px;
 }
 #fotobanda{
     width: 90%;
     margin-left: 5%;
 }
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 a{
     text-decoration: none;
+}
+h1{
+    margin: 0;
 }
 h6{
     display: inline;
@@ -63,4 +79,13 @@ h5{
     display: inline;
     width: max-content;
     margin: 0;
+}
+
+footer{
+    background-color: red;
+    margin-top: auto;
+    div{
+        display: flex;
+        justify-content: center;
+    }
 }
